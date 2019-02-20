@@ -1,0 +1,25 @@
+provisioner "file" {
+    source = "index.html"
+    destination = "/var/www/html/index.html"
+}
+
+provisioner "file" {
+    source = "ssl.crt"
+    destination = "/etc/ssl/certs/ssl.crt"
+}
+
+provisioner "file" {
+    source = "ssl.key"
+    destination = "/etc/ssl/private/ssl.key"
+}
+
+provisioner "file" {
+    source = "ssl.conf"
+    destination = "/etc/httpd/conf.d/ssl.conf"
+}
+
+provisioner "file" {
+    source = "non-ssl.conf"
+    destination = "/etc/httpd/conf.d/non-ssl.conf"
+}
+
